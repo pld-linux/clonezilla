@@ -1,10 +1,11 @@
 Summary:	Opensource Clone System (ocs), clonezilla
 Name:		clonezilla
-Version:	2.3.8
-Release:	27.1
+Version:	2.3.58
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://free.nchc.org.tw/drbl-core/src/stable/%{name}-%{version}-27.tar.bz2
+Source0:	http://free.nchc.org.tw/drbl-core/src/stable/%{name}-%{version}.tar.bz2
+# Source0-md5:	37b8e7563607c4e43050fd3b598f6672
 URL:		http://www.clonezilla.org/
 Requires:	bash
 Requires:	drbl >= 1.9.9-19
@@ -27,7 +28,7 @@ restore. While Clonezilla SE is for massive deployment, it can clone
 many (40 plus!) computers simultaneously.
 
 %prep
-%setup -q -n %{name}-%{version}-27
+%setup -q -n %{name}-%{version}
 
 grep -rl /opt/drbl/ . | xargs sed -i -e 's,/opt/drbl,%{drbldir},g'
 
